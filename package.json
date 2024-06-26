@@ -1,0 +1,17 @@
+{
+  "name": "nuxt-v2-app",
+  "version": "1.0.0",
+  "description": "Nuxt v2 boilerplate",
+  "author": "“Kurt Grüng”",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
