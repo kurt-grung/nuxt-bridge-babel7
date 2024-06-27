@@ -24,16 +24,31 @@
           GitHub
         </a>
       </div>
+
+      <br><br>
+
+      <!-- Nuxt Bridge -->
+      <h1>Nuxt Bridge</h1>
+      <BridgeComponent />
+
+      <br><br>
+
+      <Vue3Component />
+
     </div>
   </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import BridgeComponent from '~/components/BridgeComponent.vue';
+import Vue3Component from '~/components/Vue3Component.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    BridgeComponent,
+    Vue3Component
   }
 }
 </script>
