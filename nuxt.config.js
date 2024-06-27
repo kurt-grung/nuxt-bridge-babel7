@@ -2,9 +2,11 @@
 export default {
   // Enable Nuxt Bridge features
   bridge: {
+    vue: true,  // Enables Vue 3 features
     nitro: true,  // Enable the Nitro engine
     autoImports: true,  // Use auto-imports
     meta: true,  // Enable new head and meta APIs
+    scriptSetup: true,  // Enable new script setup syntax
   },
   // existing configuration
   target: 'server', // or 'static'

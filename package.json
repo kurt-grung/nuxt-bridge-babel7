@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-v2-app",
+  "name": "nuxt-migration",
   "version": "1.0.0",
-  "description": "Nuxt v2 boilerplate",
+  "description": "Nuxt Migration - Nuxt v2 boilerplate, Nuxt Bridge",
   "author": "“Kurt Grüng”",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxt/bridge": "npm:@nuxt/bridge-edge@^3.3.1-28646980.347d62e",
+    "@nuxtjs/composition-api": "^0.34.0",
     "nuxt": "^2.17.4"
   }
 }

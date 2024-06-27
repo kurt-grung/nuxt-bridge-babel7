@@ -1,39 +1,61 @@
 <template>
   <div class="container">
+    
     <div>
       <logo />
       <h1 class="title">
-        nuxt-v2-app
+        nuxt-migration
       </h1>
       <h2 class="subtitle">
-        Nuxt v2 Boilerplate
+        Nuxt2 converted to Bridge
       </h2>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
+          href="https://nuxt.com/docs/migration/overview"
           target="_blank"
           class="button--green"
         >
-          Documentation
+          Migration Documentation
         </a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://nuxt.com/docs/getting-started/upgrade"
           target="_blank"
           class="button--grey"
         >
-          GitHub
+          Upgrade Guide
         </a>
       </div>
+
+      <!-- Bridge component -->
+      <BridgeComponent />
+
+      <!-- Vue3 component -->
+      <Vue3Component />
+      
+      <h3 class="nuxt-comparison-title">
+        Nuxt Comparisons
+      </h3>
+
+      <p>
+        In the table below, there is a quick comparison between Nuxt versions:
+      </p>
+
+      <img src="~/assets/comparisons.jpg" alt="nuxt comparison" class="nuxt-comparisons" />
+
     </div>
   </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import BridgeComponent from '~/components/Bridge.vue';
+import Vue3Component from '~/components/Vue3.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    BridgeComponent,
+    Vue3Component
   }
 }
 </script>
@@ -56,11 +78,20 @@ export default {
   font-size: 100px;
   color: #35495e;
   letter-spacing: 1px;
+  font-size: 60px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 17px;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 24px;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
@@ -68,5 +99,20 @@ export default {
 
 .links {
   padding-top: 15px;
+  margin-bottom: 2em;
 }
+
+.nuxt-comparison-title {
+  margin-top: 15px;
+}
+
+.nuxt-comparisons {
+  max-width: 100%;
+  width: 50%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
 </style>
