@@ -8,10 +8,11 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
-  },
-  "devDependencies": {}
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge@^3.3.1-28646980.347d62e",
+    "nuxt": "^2.17.4"
+  }
 }

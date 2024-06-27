@@ -1,5 +1,15 @@
 
 export default {
+  // Enable Nuxt Bridge features
+  bridge: {
+    nitro: true,  // Enable the Nitro engine
+    autoImports: true,  // Use auto-imports
+    meta: true,  // Enable new head and meta APIs
+  },
+  // existing configuration
+  target: 'server', // or 'static'
+  ssr: true, // or false
+  // other configurations 
   mode: 'universal',
   /*
   ** Headers of the page
