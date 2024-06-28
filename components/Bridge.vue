@@ -1,8 +1,9 @@
 <!-- components/BridgeComponent.vue -->
 <template>
-  <div>
-    <h1>{{ title }}</h1>
-    <p>This is a component in Nuxt Bridge.</p>
+  <div class="component">
+    <h1>Vue2 / Bridge</h1>
+    <h3>{{ title }}</h3>
+    <p>Component using the Options API</p>
   </div>
 </template>
 
@@ -17,7 +18,7 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  color: blue;
+.component {
+    margin-bottom: 2em;
 }
 </style>

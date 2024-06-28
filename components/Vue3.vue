@@ -1,8 +1,9 @@
 <!-- components/Vue3Component.vue -->
 <template>
-  <div>
-    <h1>{{ message }}</h1>
-    <p>This is a Nuxt3 component using the Composition API.</p>
+  <div class="component">
+    <h1>Vue3 Component</h1>
+    <h3>{{ message }}</h3>
+    <p>Component using Vue3 latest Composition API</p>
     <button @click="count++">Clicked {{ count }} times</button>
   </div>
 </template>
@@ -13,3 +14,9 @@ import { ref } from 'vue'
 const message = ref('Hello from Vue3Component')
 const count = ref(0)
 </script>
+
+<style>
+.component {
+    margin-bottom: 2em;
+}
+</style>
