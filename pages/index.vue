@@ -7,7 +7,7 @@
         nuxt-migration
       </h1>
       <h2 class="subtitle">
-        Nuxt2 converted to Bridge
+        Nuxt2 to Bridge
       </h2>
       <div class="links">
         <a
@@ -31,6 +31,9 @@
 
       <!-- Vue3 component -->
       <Vue3Component />
+
+      <!-- Pug + Vue3 component inside Bridge -->
+      <PugComponent />
       
       <h3 class="nuxt-comparison-title">
         Nuxt Comparisons
@@ -48,14 +51,16 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-import BridgeComponent from '~/components/Bridge.vue';
+import BridgeComponent from '~/components/Bridge.vue'
 import Vue3Component from '~/components/Vue3.vue'
+import PugComponent from '~/components/Pug.vue'
 
 export default {
   components: {
     Logo,
     BridgeComponent,
-    Vue3Component
+    Vue3Component,
+    PugComponent
   }
 }
 </script>
