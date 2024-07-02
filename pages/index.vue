@@ -26,11 +26,11 @@
         </a>
       </div>
 
-      <!-- Bridge component -->
-      <BridgeComponent />
+      <!-- Options API component -->
+      <OptionsComponent />
 
-      <!-- Vue3 component -->
-      <Vue3Component />
+      <!-- Composition API component -->
+      <CompositionComponent />
 
       <!-- Pug + Vue3 component inside Bridge -->
       <PugComponent />
@@ -51,15 +51,15 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-import BridgeComponent from '~/components/Bridge.vue'
-import Vue3Component from '~/components/Vue3.vue'
+import OptionsComponent from '~/components/OptionsAPI.vue'
+import CompositionComponent from '~/components/CompositionAPI.vue'
 import PugComponent from '~/components/Pug.vue'
 
 export default {
   components: {
     Logo,
-    BridgeComponent,
-    Vue3Component,
+    OptionsComponent,
+    CompositionComponent,
     PugComponent
   }
 }

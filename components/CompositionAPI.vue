@@ -1,24 +1,26 @@
-<!-- components/Pug.vue -->
-<template lang="pug">
-div.component 
-    h1.pug ✅ Pug Template 
-    h3 {{ message }} 
+<template>
+  <div class="component">
+    <h1>✅ Vue3 Component</h1>
+    <h3>{{ message }}</h3>
+    <p>Component using Vue3 latest Composition API</p>
+    <button @click="count++">Clicked {{ count }} times</button>
 
-    h3.perf Performance Measurement 
-    p Function result: {{ result }}
-    p Execution time: {{ timeTaken }} milliseconds
+    <h3 class="perf">Performance Measurement</h3> 
+    <p>Function result: {{ result }}</p> 
+    <p>Execution time: {{ timeTaken }} milliseconds</p>
 
+  </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
-const message = ref('Hello from Pug+Vue3 Component inside Bridge :)')
-
 import { usePerformance } from '../composables/usePerformance'
 import { useConstants } from '../composables/useConstants'
 
 const { result, timeTaken, measurePerformance } = usePerformance()
 const { perMaxLen } = useConstants()
+
+const message = ref('Hello from Vue3Component')
 const count = ref(0)
 
 const runTest = (n) => {
@@ -32,16 +34,9 @@ const runTest = (n) => {
 onMounted(() => {
   measurePerformance(runTest, perMaxLen)
 })
-
 </script>
 
-<style scoped>
-
-.pug {
-    color: black;
-    font-size: 1.5em;
-}
-
+<style>
 .component {
     border: 1px solid black;
     margin: 2em;
@@ -50,13 +45,11 @@ onMounted(() => {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
-    height: auto;
     margin-bottom: 2em;
     margin-top: 2em;
 }
 
 .perf {
-    margin-top: 1em;
+  margin-top: 1em;
 }
-
 </style>
