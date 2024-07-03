@@ -43,8 +43,17 @@
         In the table below, there is a quick comparison between Nuxt versions:
       </p>
 
+      <NuxtPicture 
+        :imgAttrs="{class:'nuxt-comparisons'}"
+        format="webp" 
+        src="/comparisons.jpg" 
+        alt="nuxt comparison" 
+        class="nuxt-comparisons" 
+      />
+      
+      <!--
       <img src="~/assets/comparisons.jpg" alt="nuxt comparison" class="nuxt-comparisons" />
-
+      -->
     </div>
   </div>
 </template>
@@ -111,7 +120,7 @@ h3 {
   margin-top: 15px;
 }
 
-.nuxt-comparisons {
+.nuxt-comparisons, .nuxt-comparisons img {
   max-width: 100%;
   width: 50%;
   height: auto;

@@ -1,5 +1,12 @@
 
 export default {
+  image: {
+    // Options
+    quality: 80,
+    format: ['webp'],
+    // dir: 'assets/images',
+    // domains: ['localhost']
+  },
   // Enable Nuxt Bridge features
   bridge: {
     vue: true,  // Enables Vue 3 features
@@ -50,6 +57,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxt/image',
   ],
   /*
   ** Build configuration
