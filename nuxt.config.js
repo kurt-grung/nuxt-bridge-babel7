@@ -63,6 +63,7 @@ export default {
   ** Build configuration
   */
   build: {
+    bridge: true,  // Enables Vue 3 features
     /*
     ** You can extend webpack config here
     */
