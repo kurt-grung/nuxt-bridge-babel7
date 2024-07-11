@@ -11,6 +11,13 @@
       </h2>
       <div class="links">
         <a
+          href="https://nuxt.com/docs/bridge/overview"
+          target="_blank"
+          class="button--green"
+        >
+          Nuxt Bridge Documentation
+        </a>
+        <a
           href="https://nuxt.com/docs/migration/overview"
           target="_blank"
           class="button--green"
