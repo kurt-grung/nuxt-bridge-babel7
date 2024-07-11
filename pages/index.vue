@@ -54,6 +54,7 @@
       <!--
       <img src="~/assets/comparisons.jpg" alt="nuxt comparison" class="nuxt-comparisons" />
       -->
+      
     </div>
   </div>
 </template>
@@ -72,6 +73,7 @@ export default {
     PugComponent
   }
 }
+
 </script>
 
 <style>
