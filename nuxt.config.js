@@ -1,11 +1,28 @@
+// env 
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
+const modules = process.env.NODE_ENV == "production" ? ["add module"] : []
+console.log(`modules: ${modules}`)
+
+// Whitelist 
+const whitelist = [
+  "*"
+];
 
 export default {
+  // Image
   image: {
     // Options
     quality: 80,
     format: ['webp'],
     // dir: 'assets/images',
-    // domains: ['localhost']
+    //domains: ['localhost']
+    // IPX 
+    /*
+    ipx: {
+      // localhost
+      baseURL: 'https://localhost:3000',
+    }
+    */
   },
   // Enable Nuxt Bridge features
   bridge: {
@@ -18,8 +35,13 @@ export default {
   // existing configuration
   target: 'server', // or 'static'
   ssr: true, // or false
-  // other configurations 
-  mode: 'universal',
+  // mode: 'universal', // This option is deprecated
+
+  /* serverMiddleware */
+  serverMiddleware: [
+    //"~/middleware/helmet.ts"
+  ],
+
   /*
   ** Headers of the page
   */
@@ -58,7 +80,37 @@ export default {
   */
   modules: [
     '@nuxt/image',
+    'nuxt-helmet',
+    '@nuxtjs/dotenv',
   ],
+  /*
+  ** dotenv module options 
+  */
+  dotenv: {
+    path: './.env',
+  },
+  /*
+  ** Security module configuration
+  */
+  
+  helmet: {
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'", ...whitelist],
+        scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", ...whitelist],
+        styleSrc: ["'self'", "'unsafe-inline'", ...whitelist],
+        fontSrc: ["'self'", ...whitelist],
+        imgSrc: ["'self'", "data:", ...whitelist],
+        connectSrc: [ "'self'", ...whitelist],
+        frameSrc: ["'self'", ...whitelist],
+        frameAncestors: ["'none'"]
+      }
+    },
+    frameguard: { action: "deny" }, // X-Frame-Options
+    xssFilter: true,                // X-XSS-Protection
+    noSniff: true                   // X-Content-Type-Options
+  },
+  
   /*
   ** Build configuration
   */
