@@ -32,10 +32,10 @@ export default {
     meta: true,  // Enable new head and meta APIs
     scriptSetup: true,  // Enable new script setup syntax
   },
+  
   // existing configuration
-  target: 'server', // or 'static'
-  ssr: true, // or false
-  // mode: 'universal', // This option is deprecated
+  ssr: false,
+  target: "static",
 
   /* serverMiddleware */
   serverMiddleware: [
