@@ -115,15 +115,36 @@ export default {
   ** Build configuration
   */
   build: {
-    bridge: true,  // Enables Vue 3 features
-    /*
-    ** You can extend webpack config here
-    */
+    bridge: true,
+
     extend (config, ctx) {
+      config.module.rules.push({
+        test: /\.mjs$/,
+        type: 'javascript/auto',
+        include: /node_modules/
+      });
+    
       config.module.rules.push({
         test: /\.pug$/,
         loader: 'pug-plain-loader'
       })
+    },
+
+    babel: {
+      presets() {
+        return [
+          [
+            '@nuxt/babel-preset-app',
+            {
+              useBuiltIns: 'usage',
+              corejs: { version: 3 },
+              targets: { node: '18' },
+              loose: false 
+            }
+          ]
+        ];
+      },
+      plugins: ['@babel/plugin-proposal-optional-chaining']
     }
   }
 }
